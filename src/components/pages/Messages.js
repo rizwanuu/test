@@ -21,11 +21,13 @@ export const Message1 = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      ServerCallings.receiveMessage(userRoom, (data) => {
-        if (data) {
-          setMessages(data)
-        }
-      })
+      if (userRoom) {
+        ServerCallings.receiveMessage(userRoom, (data) => {
+          if (data) {
+            setMessages(data)
+          }
+        })
+      }
     }, 1000);
     return () => clearInterval(interval);
   }, [])

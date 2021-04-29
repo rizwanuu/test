@@ -11,14 +11,22 @@ import { useEffect, useState } from 'react';
 
 
 function App() {
-  
+
   const [path, setPath] = useState('')
+  const [show, setShow] = useState(true)
+  const [urlId, setUrlId] = useState(null)
+  if (show) {
+    setUrlId(window.location.pathname.split('/')[1])
+    setShow(false)
+  }
   useEffect(() => {
-    var userId = localStorage.getItem("id")
+    console.log(urlId)
     const interval = setInterval(() => {
-      ServerCallings.chatRooms(userId, (data) => {
-        localStorage.setItem("chatData", JSON.stringify(data));
-      })
+      if (urlId) {
+        ServerCallings.chatRooms(urlId, (data) => {
+          localStorage.setItem("chatData", JSON.stringify(data));
+        })
+      }
       setPath(localStorage.getItem("pathname"))
     }, 1000);
     return () => clearInterval(interval);
