@@ -21,34 +21,12 @@ const admin_recent_viewed = api_endpoint + "user/recent/"
 const send_msg = api_endpoint + "property/message/"
 const receive_msg = api_endpoint + "property/get_message/"
 const chat_rooms = api_endpoint + "property/get_message_admin/"
-const get_blogs = api_endpoint + "property/blogs/"
-const subscribe_tonewletter = api_endpoint + "user/newsletter/"
 
 //
 export class ServerCallings {
     static revive() {
         NodeFetchHelper.get(api_endpoint, null, null, (a, b) => {
             console.log("Revived")
-        })
-    }
-
-    static subscribeToNewsLetter(body, callback) {
-        NodeFetchHelper.post(subscribe_tonewletter, null, null, body, (status, data) => {
-            if (status >= 400) {
-                callback(null)
-            } else {
-                callback(data)
-            }
-        })
-    }
-
-    static getBlogs(cb) {
-        NodeFetchHelper.get(get_blogs, null, null, (status, data) => {
-            if (status >= 400) {
-                cb(null)
-            } else {
-                cb(data)
-            }
         })
     }
 
@@ -73,7 +51,7 @@ export class ServerCallings {
     }
 
     static sendMessages(body, callback) {
-        NodeFetchHelper.post(send_msg, null, null, body, (status, data) => {
+        NodeFetchHelper.post(send_msg , null, null, body, (status, data) => {
             if (status >= 400) {
                 callback(null)
             } else {

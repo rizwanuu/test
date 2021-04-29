@@ -1,18 +1,10 @@
-@import './Home.scss';
-@import './Sell.scss';
-@import './About.scss';
-@import './Header.scss';
-@import './Footer.scss';
-@import './Search.scss';
-@import './Feature.scss';
-@import './Blog.scss';
-@import './Experience.scss';
-@import './Submitproperty.scss';
-@import './Loan.scss';
-@import './Submitoffer.scss';
-@import './map.scss';
-@import './modals/index.scss';
-@import './chatApp//index.scss';
+@import './dashboard.scss';
+@import './pages/Profile.scss';
+@import './pages/Mortgagee.scss';
+@import './pages/Homesearch.scss';
+@import './pages/Messages.scss';
+
+
 
 @font-face {
     font-family: Poppins;

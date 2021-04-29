@@ -1,58 +1,64 @@
-// import React, { useEffect } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-
-import Home from './components/Home';
-import Sell from './components/Sell';
-import Search from './components/Search';
-import Feature from './components/Feature';
-import About from './components/About';
-import Blog from './components/Blog';
-import Experience from './components/Experience';
-import Submitproperty from './components/Submitproperty';
-import Loan from './components/Loan';
-import Submitoffer from './components/Submitoffer'
-import map from './components/googleMap/sample'
+import Sidebar from './components/Sidebar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { EditProfile, ValidateProfile } from './components/pages/Profile';
+import { Recentviewed, Favorites } from './components/pages/Homesearch';
+import { Sellhome, Listanalysis } from './components/pages/selling';
+import { Mortgagecal1, Mortgagecal2 } from './components/pages/Mortgagee';
+import { Message1, Message2 } from './components/pages/Messages';
+import { Feedback, Helpcenter, Settings, Support } from './components/pages/Account';
+import { ServerCallings } from './utils/ServerCallings';
 import { useEffect, useState } from 'react';
-import { Route, Redirect, Switch, useLocation } from 'react-router-dom';
-// import { ServerCallings } from "./utils/ServerCallings";
 
-function App(props) {
-    const location = useLocation();
-    const [showFooter, setShowFooter] = useState(true);
-    // const isLogedin = localStorage.getItem("id");
 
-    // console.log({ location })
-    useEffect(() => {
-        if (location.pathname.includes("/admin-dashboard")) setShowFooter(false);
-        else setShowFooter(true)
-    }, [location])
+function App() {
+  
+  const [path, setPath] = useState('')
+  useEffect(() => {
+    var userId = localStorage.getItem("id")
+    const interval = setInterval(() => {
+      ServerCallings.chatRooms(userId, (data) => {
+        localStorage.setItem("chatData", JSON.stringify(data));
+      })
+      setPath(localStorage.getItem("pathname"))
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [localStorage.getItem("pathname")])
 
-    // useEffect(() => {
-    //     ServerCallings.revive()
-    // }, [])
 
-    return (
-        <>
-            <Header {...props} />
-            <Switch>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/sell' component={Sell} />
-                <Route exact path='/about' component={About} />
-                <Route exact path='/search' component={Search} />
-                <Route exact path='/feature' component={Feature} />
-                <Route exact path='/feature/:id' component={Feature} />
-                <Route exact path='/blog' component={Blog} />
-                <Route exact path='/experience' component={Experience} />
-                <Route exact path='/submit-property' component={Submitproperty} />
-                <Route exact path='/loan' component={Loan} />
-                <Route exact path='/submit-offer' component={Submitoffer} />
-                <Route exact path='/map' component={map} />
-                <Redirect exact to='/' />
-            </Switch>
-            {showFooter && <Footer {...props} />}
-        </>
-    );
+  return (
+    <Router>
+      <Sidebar />
+      <Switch>
+        <Route path='/profile/editprofile' exact component={EditProfile} />
+        <Route path='/profile/validateprofile' exact component={ValidateProfile} />
+
+        <Route path='/homesearch/recentviewed' exact component={Recentviewed} />
+        <Route path='/homesearch/favorites' exact component={Favorites} />
+
+        <Route path='/selling/sellhome' exact component={Sellhome} />
+        <Route path='/selling/listanalysis' exact component={Listanalysis} />
+
+        <Route path='/mortgage/mortgagecal1' exact component={Mortgagecal1} />
+        <Route path='/mortgage/mortgagecal2' exact component={Mortgagecal2} />
+        <Route path={path} exact component={Message1} />
+        {/* {
+          console.log(
+            chatpath.map((item, index) => {
+              return <Route key={index} path={`/messages/${item}`} exact component={Message1} />
+            })
+          )
+        } */}
+        {/* <Route path='/messages/message2' exact component={Message2} /> */}
+
+
+        <Route path='/account/settings' exact component={Settings} />
+        <Route path='/account/feedback' exact component={Feedback} />
+        <Route path='/account/helpcenter' exact component={Helpcenter} />
+        <Route path='/account/support' exact component={Support} />
+
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;
