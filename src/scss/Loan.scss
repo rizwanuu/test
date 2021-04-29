@@ -1,0 +1,530 @@
+.loan {
+  // padding-top: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("./../assets/images/bg-pattern.png");
+  .row {
+    .loan-need {
+      background: #0042cc;
+      border-radius: 40px 0 0 8px;
+      width: 100%;
+      height: 384px;
+      p {
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 46px;
+        line-height: 56px;
+        color: #ffffff;
+        margin-top: 98px;
+        @media (max-width: 1273px) {
+          font-size: 25px;
+          line-height: 36px;
+        }
+        @media (max-width: 785px) {
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
+      .search {
+        padding-left: 50px;
+      }
+      .search-field {
+        height: 64px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border: 1px solid #0042cc;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 150px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-top: 43px;
+
+        div {
+          width: 100%;
+          height: 100%;
+
+          display: flex;
+          align-items: center;
+
+          border-radius: 10px 0 0 10px;
+          background-color: #ffffff;
+
+          img {
+            width: 14px;
+            height: 20px;
+            margin-left: 22px;
+          }
+
+          input {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+
+            font-family: Poppins, Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 30px;
+            color: #828282;
+            text-align: left;
+
+            outline: none;
+            border: none;
+            @media (max-width: 914px) {
+              width: 150px;
+            }
+            @media (max-width: 699px) {
+              width: 150px;
+              font-size: 12px;
+            }
+            @media (max-width: 361px) {
+              width: 80px;
+              font-size: 11px;
+              height: 42px;
+            }
+          }
+        }
+
+        button {
+          height: 100%;
+          width: 155px;
+
+          font-family: Poppins, Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 22px;
+          color: #ffffff;
+
+          outline: none;
+          border: none;
+          background: #2ec397;
+          border-radius: 0 9px 9px 0;
+          @media (max-width: 699px) {
+            font-size: 14px;
+          }
+          @media (max-width: 361px) {
+            width: 65px;
+            font-size: 10px;
+            height: 44px;
+          }
+        }
+
+        @media (max-width: 361px) {
+          height: 46px;
+          width: 115px;
+        }
+      }
+      .loanBlue {
+        width: 100%;
+        height: 470px;
+        margin-top: -30px;
+        @media (max-width: 575px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .cal-tabs {
+    padding: 0;
+    margin-top: 100px;
+    justify-content: center;
+
+    .c {
+      padding: 0;
+      margin-right: 20px;
+      .hr {
+        border: 3px solid #f1f1f1;
+      }
+
+      .hrc {
+        border: 3px solid #2fc89b !important;
+      }
+      .d {
+        padding: 25px;
+        .loanUnion {
+          margin-left: 35%;
+          margin-bottom: 17px;
+        }
+        h5 {
+          width: 100%;
+          font-family: Poppins, Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 39px;
+          text-align: center;
+          color: #272c37;
+          margin-bottom: 14px;
+        }
+
+        p {
+          width: 100%;
+          font-family: Poppins, Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 22px;
+          text-align: center;
+          color: #4f4f4f;
+        }
+      }
+    }
+    @media (max-width: 1200px) {
+      .c {
+        .d {
+          padding: 10px;
+          .loanUnion {
+            width: 50px;
+            height: 50px;
+          }
+          h5 {
+            font-size: 18px;
+            line-height: normal;
+          }
+
+          p {
+            font-size: 11px;
+            line-height: normal;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      .c {
+        .d {
+          .loanUnion {
+            width: 40px;
+            height: 40px;
+          }
+          h5 {
+            font-size: 13px;
+            line-height: normal;
+          }
+
+          p {
+            font-size: 10px;
+            line-height: normal;
+          }
+        }
+      }
+    }
+    @media (max-width: 766px) {
+      .d {
+        .para {
+          margin-top: 35px;
+        }
+      }
+      .hr {
+        margin-top: 14px;
+      }
+      .hrc {
+        margin-top: 14px;
+      }
+    }
+  }
+  .loans {
+    // padding: 0;
+    margin-top: 88px !important;
+    .loan-options {
+      h4 {
+        width: 100%;
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+        color: #272c37;
+        margin-bottom: 50px;
+      }
+    }
+    .loan-type {
+      padding: 5px 0 0 0;
+      // width: 100%;
+      h5 {
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+        color: #272c37;
+        margin-bottom: 90px;
+        margin-top: 45px;
+      }
+      div {
+        margin-top: 40px;
+        h4 {
+          font-family: Poppins, Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+          color: #000000;
+        }
+        p {
+          font-family: Poppins, Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 22px;
+          color: #4f4f4f;
+        }
+      }
+      @media (max-width: 991px) {
+        h5 {
+          font-size: 12px;
+          line-height: 20px;
+        }
+        h4 {
+          font-size: 12px !important;
+          line-height: 18px !important;
+        }
+        p {
+          font-size: 12px !important;
+          line-height: 18px !important;
+        }
+      }
+      @media (max-width: 767px) {
+        h5 {
+          font-size: 10px;
+          line-height: 10px;
+        }
+        h4 {
+          font-size: 5px !important;
+          line-height: 15px !important;
+        }
+        p {
+          font-size: 6px !important;
+          line-height: 10px !important;
+        }
+      }
+    }
+    .main {
+      padding: 5px 0 0 0;
+      h5 {
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        color: #272c37;
+        margin-bottom: 64px;
+        margin-top: 45px;
+      }
+      .a {
+        padding: 5px 0 65px 0;
+      }
+      .b {
+        padding: 0 0 80px 0;
+      }
+      .c {
+        padding: 0 0 89px 0;
+      }
+      .d {
+        padding: 0 0 85px 0;
+      }
+      .e {
+        padding: 0 0 77px 0;
+      }
+      div {
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        color: #272c37;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      p {
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+        color: #ffffff;
+
+        padding: 26px 0 38px 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      @media (max-width: 991px) {
+        h5 {
+          font-size: 12px;
+          line-height: 15px;
+        }
+        div {
+          font-size: 12px !important;
+          line-height: 21px !important;
+        }
+        p {
+          font-size: 12px !important;
+          line-height: 18px !important;
+          padding: 26px 0 30px 0;
+        }
+      }
+      @media (max-width: 767px) {
+        h5 {
+          font-size: 8px;
+          line-height: 15px;
+        }
+        div {
+          font-size: 8px !important;
+          line-height: 15px !important;
+        }
+        p {
+          font-size: 6px !important;
+          line-height: 15px !important;
+        }
+      }
+      @media (max-width: 504px) {
+        h5 {
+          font-size: 5px;
+        }
+      }
+    }
+    .current-col {
+      background: #e1ebff;
+      border-radius: 30px;
+      height: 100%;
+    }
+    .min-col {
+      background: #bff8e7;
+      border-radius: 30px;
+      height: 100%;
+    }
+    .best-col {
+      background: #0042cc;
+      border-radius: 30px;
+      height: 100%;
+
+      h5 {
+        color: #ffffff !important;
+      }
+    }
+  }
+  .questionHeading {
+    h4 {
+      width: 100%;
+      font-family: Poppins, Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 40px;
+      text-align: center;
+      color: #272c37;
+      margin: 101px 0 63px 0;
+    }
+  }
+  .askedQuestions {
+    .col1 {
+      border-bottom: 1px solid #d8d8d8;
+      border-radius: 10px 10px 0 0;
+    }
+    .col2 {
+      border-bottom: 1px solid #d8d8d8;
+      border-radius: 10px 10px 0 0;
+    }
+    .col3 {
+      border-radius: 0 0 10px 10px;
+    }
+    .col {
+      .mortage {
+        width: 100%;
+        background: #fcfdff;
+        padding: 26px 25px 25px 61px;
+        h5 {
+          font-family: Poppins, Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 40px;
+          color: #000000;
+
+          i {
+            float: right;
+            padding: 13px 25px 0 0;
+          }
+        }
+        @media (max-width: 500px) {
+          h5 {
+            font-size: 13px;
+          }
+          i {
+            float: right;
+            padding: 30px 25px 0 0;
+          }
+        }
+        p {
+          font-family: Poppins, Arial, Helvetica, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 22px;
+          color: #4f4f4f;
+        }
+      }
+    }
+    .box {
+      width: 100%;
+      border-left: 4px solid #2fc89b;
+      border-top: 1px solid #2fc89b;
+      border-bottom: 1px solid #2fc89b;
+      padding: 29px 25px 30px 61px;
+      background: #f3fffc;
+      box-shadow: 0px 24px 64px rgba(22, 27, 45, 0.05);
+      h5 {
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 40px;
+        color: #000000;
+      }
+      p {
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+        color: #4f4f4f;
+      }
+      @media (max-width: 504px) {
+        p {
+          padding-right: 5px !important;
+        }
+      }
+      ul {
+        list-style: none;
+      }
+      ul li {
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 32px;
+        color: #4f4f4f;
+      }
+
+      ul li::before {
+        content: "\2022";
+        color: #2fc89b;
+        font-weight: bold;
+        margin-right: 33px;
+        margin-left: -43px;
+      }
+    }
+  }
+}

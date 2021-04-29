@@ -1,0 +1,73 @@
+.mortgageCalculator-modal {
+    @media (min-width: 576px) {
+        .modal-dialog {
+            max-width: 80% !important;
+        }
+    }
+    .heading {
+        display: flex;
+        margin-top: 2%;
+        justify-content: center;
+        font-weight: bold;
+    }
+    .sub-heading {
+        display: flex;
+        text-align: center;
+        font-size: 16px;
+        margin-top: -3%;
+    }
+    .calculator {
+        .calc-fields {
+            width: 100%;
+            padding-top: 1.5%;
+            margin-bottom: 3%;
+            label {
+                font-size: 16px;
+                margin-left: 10%;
+            }
+            p {
+                font-size: 12px;
+                margin-left: 10%;
+                color: lightgray;
+            }
+            input {
+                padding: 10px;
+                display: block;
+                margin: auto;
+                width: 80%;
+                height: 45px;
+                outline: none;
+                border: 1px solid lightgray;
+                border-radius: 5px;
+            }
+            select {
+                padding: 10px;
+                display: block;
+                margin: auto;
+                width: 80%;
+                height: 45px;
+                outline: none;
+                border: 1px solid lightgray;
+                border-radius: 5px;
+            }
+        }
+    }
+    .calculatorDetail {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 15px;
+        border-radius: 5px;
+        overflow: auto;
+        margin-top: 10%;
+        h2{
+            margin-top: 10px;
+        }
+        p{
+            margin-top: 10px;
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+        .content{
+            height: 20px;
+        }
+    }
+}
